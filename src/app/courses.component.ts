@@ -4,12 +4,14 @@ import {Component} from "@angular/core";
 @Component({
   selector: 'courses',
   template: `
-    <div (click)="onDivClick()">
-      <button (click)="onSave($event)">Save</button>
-    </div>
+    <input (keyup.enter)="onKeyUp()"/>
   `
 })
 export class CoursesComponent {
+  onKeyUp() {
+   console.log("ENTER was pressed");
+  }
+
   onDivClick() {
     console.log("Div was clicked");
   }
