@@ -4,19 +4,11 @@ import {Component} from "@angular/core";
 @Component({
   selector: 'courses',
   template: `
-      {{ course.title | uppercase | lowercase }} <br/>
-      {{ course.students | number }} <br/>
-      {{ course.rating | number:'1.2-2'}} <br/>
-      {{ course.price | currency:'GBP':true:'3.2-2' }} <br/>
-      {{ course.releaseDate | date:'EEEE, MMMM d, y' }} <br/>
+      {{ text | summary:10 }}
   `
 })
 export class CoursesComponent {
-  course = {
-    title: "The Complete Angular Course",
-    rating: 4.9745,
-    students: 30123,
-    price: 190.95,
-    releaseDate: new Date(2016, 3, 1)
-  }
+text = `
+After a discount is applied, the next delivery (or a future one) will be discounted so effectively this is now the “nearest discounted delivery”. In the earlier scenario, we want to show that benefit message but Scenario E says otherwise. Shouldn’t be be consistent and always show the next discounted delivery message when there is one?
+`
 }
