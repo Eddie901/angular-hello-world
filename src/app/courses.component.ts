@@ -4,13 +4,16 @@ import {Component} from "@angular/core";
 @Component({
   selector: 'courses',
   template: `
-    <input #email (keyup.enter)="onKeyUp(email.value)"/>
+    <input [(ngModel)]="email" (keyup.enter)="onKeyUp()"/>
   `
 })
 export class CoursesComponent {
-  onKeyUp(email: string) {
+
+  email = "me@example.com";
+
+  onKeyUp() {
    console.log("ENTER was pressed");
-   console.log(email);
+   console.log(this.email);
   }
 
   onDivClick() {
