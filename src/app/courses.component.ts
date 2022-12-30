@@ -4,18 +4,18 @@ import {Component} from "@angular/core";
 @Component({
   selector: 'courses',
   template: `
-    <button class="btn btn-primary" [class.active]="isActive">Save</button>
-    <button [style.backgroundColor]="isActive ? 'blue' : 'white'">Save</button>
-    <img [src]="imageUrl"/>
-    <table>
-      <tr>
-        <td [attr.colspan]="colSpan"></td>
-      </tr>
-    </table>
+    <div (click)="onDivClick()">
+      <button (click)="onSave($event)">Save</button>
+    </div>
   `
 })
 export class CoursesComponent {
-  isActive = false;
-  imageUrl = "";
-  colSpan = 2;
+  onDivClick() {
+    console.log("Div was clicked");
+  }
+
+  onSave($event: any) {
+    $event.stopPropagation();
+    console.log("Button was clicked", $event);
+  }
 }
