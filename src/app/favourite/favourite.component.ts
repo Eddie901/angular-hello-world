@@ -1,13 +1,12 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, Input} from '@angular/core';
 
 @Component({
   selector: 'favourite',
   templateUrl: './favourite.component.html',
-  styleUrls: ['./favourite.component.scss'],
-  inputs: ['isFavourite']
+  styleUrls: ['./favourite.component.scss']
 })
 export class FavouriteComponent {
-  isFavourite = true;
+  @Input() isFavourite = true;
 
   ngOnInit() {
   }
