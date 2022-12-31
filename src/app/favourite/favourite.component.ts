@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, OnInit, Input} from '@angular/core';
 
 @Component({
   selector: 'favourite',
@@ -6,7 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./favourite.component.scss']
 })
 export class FavouriteComponent {
-  isFavourite =  true;
+  @Input() isFavourite = true;
+
+  ngOnInit() {
+  }
 
   onClick() {
     this.isFavourite = !this.isFavourite;
