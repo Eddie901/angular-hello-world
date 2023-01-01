@@ -1,6 +1,5 @@
-<h1>Angular</h1>
-<favourite
-  [is-favourite]="post.isFavourite"
-  (change)="onFavouriteChanged($event)"
->
-</favourite>
+<like>
+  [likesCount]="tweet.likesCount"
+  [isLiked]="tweet.isLiked"
+</like>
+
