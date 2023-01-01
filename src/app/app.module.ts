@@ -12,6 +12,8 @@ import {SummaryPipe} from './summary.pipe';
 import {FavouriteComponent} from './favourite/favourite.component';
 import { TitlecaseComponent } from './titlecase/titlecase.component';
 import { TitleizePipe } from './titleize.pipe';
+import { PanelComponent } from './panel/panel.component';
+import { LikeComponent } from './like/like.component';
 
 
 @NgModule({
@@ -23,7 +25,9 @@ import { TitleizePipe } from './titleize.pipe';
     SummaryPipe,
     FavouriteComponent,
     TitlecaseComponent,
-    TitleizePipe
+    TitleizePipe,
+    PanelComponent,
+    LikeComponent
   ],
   imports: [
     BrowserModule,
