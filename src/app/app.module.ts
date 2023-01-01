@@ -4,30 +4,12 @@ import {FormsModule} from '@angular/forms';
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {CoursesComponent} from "./courses.component";
-import {CourseComponent} from './course/course.component';
-import {CoursesService} from "./courses.service";
-import {AuthorsComponent} from './authors/authors.component';
-import {AuthorsService} from './authors.service';
-import {SummaryPipe} from './summary.pipe';
-import {FavouriteComponent} from './favourite/favourite.component';
-import { TitlecaseComponent } from './titlecase/titlecase.component';
-import { TitleizePipe } from './titleize.pipe';
-import { PanelComponent } from './panel/panel.component';
-import { LikeComponent } from './like/like.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     CoursesComponent,
-    CourseComponent,
-    AuthorsComponent,
-    SummaryPipe,
-    FavouriteComponent,
-    TitlecaseComponent,
-    TitleizePipe,
-    PanelComponent,
-    LikeComponent
   ],
   imports: [
     BrowserModule,
@@ -35,8 +17,6 @@ import { LikeComponent } from './like/like.component';
     FormsModule
   ],
   providers: [
-    CoursesService,
-    AuthorsService
   ],
   bootstrap: [AppComponent]
 })
