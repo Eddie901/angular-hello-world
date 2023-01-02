@@ -6,5 +6,9 @@ import {Component} from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  canSave = true;
+  tweet = {
+    body: "...",
+    likesCount: 10,
+    isLiked: false
+  }
 }
