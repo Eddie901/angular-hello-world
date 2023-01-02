@@ -7,7 +7,9 @@ import {CoursesComponent} from "./courses.component";
 import {FavouriteComponent} from "./favourite/favourite.component";
 import {InputFormatDirective} from './input-format.directive';
 import {LikesComponent} from './likes/likes.component';
-import { ZippyComponent } from './zippy/zippy.component';
+import {ZippyComponent} from './zippy/zippy.component';
+import {TitlecaseComponent} from "./titlecase/titlecase.component";
+import {TitleizePipe} from "./titleize.pipe";
 
 
 @NgModule({
@@ -17,7 +19,9 @@ import { ZippyComponent } from './zippy/zippy.component';
     FavouriteComponent,
     InputFormatDirective,
     LikesComponent,
+    TitlecaseComponent,
     ZippyComponent,
+    TitleizePipe,
   ],
   imports: [
     BrowserModule,

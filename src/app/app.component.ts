@@ -15,5 +15,9 @@ export class AppComponent {
     content: "Billing details content"
   }
 
-
+  tweet = {
+  body: "...",
+  isLiked: false,
+  likesCount: 10
+  }
 }
