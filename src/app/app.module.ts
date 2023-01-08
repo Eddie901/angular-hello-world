@@ -10,6 +10,7 @@ import {LikesComponent} from './likes/likes.component';
 import {ZippyComponent} from './zippy/zippy.component';
 import {TitlecaseComponent} from "./titlecase/titlecase.component";
 import {TitleizePipe} from "./titleize.pipe";
+import { ContactFormComponent } from './contact-form/contact-form.component';
 
 
 @NgModule({
@@ -22,6 +23,7 @@ import {TitleizePipe} from "./titleize.pipe";
     TitlecaseComponent,
     ZippyComponent,
     TitleizePipe,
+    ContactFormComponent,
   ],
   imports: [
     BrowserModule,
