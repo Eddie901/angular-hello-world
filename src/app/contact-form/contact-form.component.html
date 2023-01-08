@@ -19,6 +19,10 @@
       <label for="contact">Comment</label>
       <input ngModel name="contact" id="contact" type="textarea" cols="30" rows="10" class="form-control">
     </div>
-    <button class="btn btn-primary">Submit</button>
+    <div class="checkbox">
+      <label><input type="checkbox" ngModel name="isSubscribed">Subscribe to mailing list</label>
+    </div>
+    <button class="btn btn-primary" [disabled]="!f.valid">Submit</button>
+    {{ f.value | json }}
   </form>
 </div>
