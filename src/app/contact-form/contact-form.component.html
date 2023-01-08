@@ -1,7 +1,7 @@
 <div>
   <div class="form-group">
     <label for="firstName">First Name</label>
-    <input required minlength="5" pattern="rachel" maxlength="10" pattern="bananas"
+    <input required minlength="5" pattern="rachel" maxlength="10"
            ngModel name="firstName" (change)="log(firstName)" #firstName="ngModel"
            id="firstName" type="text" class="form-control">
     <div class="alert alert-danger" *ngIf="firstName.touched && !firstName.valid">
