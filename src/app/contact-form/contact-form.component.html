@@ -1,8 +1,17 @@
 <div>
   <div class="form-group">
     <label for="firstName">First Name</label>
-    <input required ngModel name="firstName" id="firstName" #firstName="ngModel" type="text" class="form-control">
-    <div class="alert alert-danger" *ngIf="firstName.touched && !firstName.valid">First name is required</div>
+    <input required minlength="5" pattern="rachel" maxlength="10" pattern="bananas"
+           ngModel name="firstName" (change)="log(firstName)" #firstName="ngModel"
+           id="firstName" type="text" class="form-control">
+    <div class="alert alert-danger" *ngIf="firstName.touched && !firstName.valid">
+      <div *ngIf="firstName.errors?.['required']">First Name is required</div>
+      <div *ngIf="firstName.errors?.['minlength']">First Name must be at least {{ firstName.errors?.['minlength'].requiredLength }}
+        characters long
+      </div>
+      <div *ngIf="firstName.errors?.['maxlength']">First Name must be less than 11 characters long</div>
+      <div *ngIf="firstName.errors?.['pattern']">First Name does not match the pattern</div>
+    </div>
   </div>
   <div class="form-group">
     <label for="contact">Comment</label>
